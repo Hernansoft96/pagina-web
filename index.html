@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spa de Manicure - Borrador Estructurado</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const estado = document.getElementById("estado-horario");
+    const hora = new Date().getHours();
+
+    if (hora >= 9 && hora < 18) {
+      estado.innerHTML = "🟢 Abierto ahora";
+    } else {
+      estado.innerHTML = "🔴 Cerrado";
+    }
+  });
+
+</script>
+
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+      <a class="navbar-brand" href="#">Angel rose nails</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Spa de Manicure</h1>
+      <p>Cuidado y belleza para tus manos</p>
+      <a href="https://wa.me/573125458407?text=Hola%20quiero%20agendar%20una%20cita%20💅"
+      target="_blank"
+      class="btn btn-danger"
+      >
+      Agenda tu cita
+      </a>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="container my-5">
+      <h2 class="text-center section-title">Nuestros Servicios</h2>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Manicure Tradicional</h5>
+              <p class="card-text">Cuidado básico y elegante para tus uñas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Manicure Semipermanente</h5>
+              <p class="card-text">Color duradero y acabado perfecto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Pedicure Spa</h5>
+              <p class="card-text">Relajación y cuidado profundo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Diseño de Uñas</h5>
+              <p class="card-text">Diseños personalizados a tu estilo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="container my-5">
+      <h2 class="text-center section-title">Sobre Nosotros</h2>
+      <p class="text-center">
+        Somos un spa especializado en manicure y pedicure, enfocados en la higiene,
+        el bienestar y la belleza de nuestras clientas.
+      </p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="container my-5">
+      <h2 class="text-center mb-4">Contacto</h2>
+      
+<div class="row text-center aligen-items-center"> 
+
+       <!-- WhatsApp -->
+
+    <div class="col-md-3 col-6 mb-4">
+      <a href="https://wa.me/573125458407" 
+      target="_blank" 
+      class="contact-link">
+      <i class="fab fa-whatsapp fa-2x text-success"></i>
+      <p class="mt-2">WhatsApp</p>
+    </a>
+    </div>
+
+    <!-- Facebook -->
+
+    <div class="col-md-3 col-6 mb-4">
+      <a href="https://www.facebook.com/share/1GJqQJWf1k/" target="_blank" class="contact-link">
+      <i class="fab fa-facebook fa-2x text-primary"></i>
+      <p class="mt-2">Facebook</p>
+      </a>
+    </div>
+
+
+    <!-- Instagram -->
+
+    <div class="col-md-3 col-6 mb-4">
+      <a href="https://www.instagram.com/angelrosenails?igsh=YmdqdHM1d3B3dnE=" target="_blank" class="contact-link">
+      <i class="fab fa-instagram fa-2x text-danger"></i>
+      <p class="mt-2">Instagram</p>
+      </a>
+    </div>
+
+    <!-- Horarios -->
+
+    <div class="col-md-3 col-6 mb-4">
+      <i class="fas fa-clock fa-2x text-secondary"></i>
+      <p id="estado-horario" class="mt-2">Horario</p>
+    </div>
+
+      
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Spa de Manicure - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
